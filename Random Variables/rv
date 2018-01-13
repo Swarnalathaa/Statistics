@@ -1,0 +1,27 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath}
+\begin{document}
+\subsection*{\textbf{\textit{Generating Bernoulli Random Variable from uniform Random variable}}}
+Let $ u\sim U[0,1] $\\
+Step 1: Set a threshold s such that:
+\begin{center}
+\begin{equation}
+X = \begin{cases} 1, & \mbox{if } u<s \\ 0, & \mbox{if } u>s\end{cases}
+\end{equation}
+\end{center}
+where X is a Bernoulli random variable $ X\sim \beta(p) $.\\
+s should be defined such that $P(X=1) = p$
+\begin{equation}
+P(X=1) = P(u\leq s) = s
+\end{equation}
+
+\subsection*{\textbf{\textit{Generating Binomial Random Variable from Bernoulli}}}
+Let Y be binomial random variable $ y \sim \beta(n,p) $\\
+\begin{equation}
+Y = X_1 + X_2+......+X_n
+\end{equation}
+where $X_i$ is a bernoulli $ X_i = \beta(p) $
+
+\subsection*{\textbf{\textit{Generating Geometric Random Variable from Bernoulli}}}
+We repeat bernoulli simulation until first success. The number of simulation is an observation of the geometric distribution.
+\end{document}
